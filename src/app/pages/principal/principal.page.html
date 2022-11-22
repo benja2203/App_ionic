@@ -1,8 +1,8 @@
-<ion-header>
+<ion-header id="menu">
 
   <ion-toolbar>
-    
-    
+
+
     <ion-button slot="start" fill="outline-solid">
       <ion-menu-button autoHide="false">
 
@@ -18,7 +18,7 @@
 <ion-content [fullscreen]="true">
 
 
-    <ion-slides [options]="slideOpts"> 
+    <ion-slides [options]="slideOpts" id="slides_principal">
       <ion-slide>
         <ion-img src="assets/icon/Palacio.jpg"></ion-img>
       </ion-slide>
@@ -31,11 +31,14 @@
       <br>
     </ion-slides>
 
-    <div>
+    <div id="boton_abrir_qr">
       <ion-button expand="block" (click)="leerQR()"> Leer QR </ion-button>
       <ion-label class="titulo"> {{texto}} </ion-label>
     </div>
 
+    <div id="boton_cerrar_qr" hidden>
+      <ion-button expand="block" (click)="cerrarQR()"> Cerrar QR </ion-button>
+    </div>
   </ion-content>
 
 
@@ -44,7 +47,7 @@
 
 
 <ion-footer>
-  
+
   <ion-grid fixed>
     <ion-row>
 

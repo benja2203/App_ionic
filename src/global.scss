@@ -24,3 +24,18 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.degradado {
+    --color: #FFFFFF;
+    --background: linear-gradient(to right, #00031b, #007eebd8);
+}
+
+.titulo {
+    font-size: 27px !important;
+    color: #86c6ff !important;
+}
+
+.container{
+    align-items: center;
+}
+

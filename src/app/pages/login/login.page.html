@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-toolbar class="degradado">
+    <ion-img style="height: 20px; height: 30px;" src="assets/icon/Logo_DuocUC.svg.png"></ion-img>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content class="ion-padding">
+
+  <br>  
+    <div class="ion-text-center ion-padding">
+      <ion-label class="titulo">Iniciar sesion</ion-label>
+    </div>
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="mdl_email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="mdl_pass"></ion-input>
+    </ion-item>
+    <br>
+    <div class="ion-text-center ion-padding">
+      <ion-button (click)="ingresar()" expand="block" class="degradado">Ingresar</ion-button>
+    </div>
+
+    <div class="ion-text-center ion-padding">
+      <ion-label>¿No tienes cuenta?</ion-label>
+      <ion-button [routerLink]="['/register']" class="degradado" expand="full">¡Registrate!</ion-button>
+    </div>
+    <br>
+    <div class="ion-text-center ion-padding">
+      <ion-label>¿Olvidaste tu contraseña?</ion-label><br>
+      <ion-button [routerLink]="['/recover-password']" class="degradado" size="small">Cambiar Contraseña</ion-button>
+    </div>
+</ion-content>

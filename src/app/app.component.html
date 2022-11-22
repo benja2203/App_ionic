@@ -1,3 +1,30 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar fill="outline-solid">
+        <ion-title>Menu</ion-title>
+        
+
+        <ion-button slot="end" fill="outline-solid">
+          <ion-menu-button autoHide="false">
+            <ion-icon name="close-outline"></ion-icon>
+          </ion-menu-button>
+        </ion-button>
+
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+
+        <div class="ion-text-center ion-padding">
+          <ion-button [routerLink]="['/recover-password']" expand="full" >Cambiar Contraseña</ion-button>
+          
+          <ion-button [routerLink]="['/login']" expand="full" >Cerrar sesión</ion-button>
+        </div>
+        
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

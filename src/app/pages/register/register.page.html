@@ -1,0 +1,48 @@
+<ion-header>
+
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+  <ion-toolbar class="degradado">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-img style="height: 20px; height: 30px;" src="assets/icon/Logo_DuocUC.svg.png"></ion-img>
+  </ion-toolbar>
+
+
+</ion-header>
+<ion-content class="ion-padding">
+  <form [formGroup]="formGrp" novalidate>
+  <br>  
+    <div class="ion-text-center ion-padding">
+      <ion-label class="titulo">Registrar Usuario</ion-label>
+    </div>
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="mdl_email" type="email" formControlName="emailidctrl"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="mdl_nombre" formControlName="userctrl"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Apellido</ion-label>
+      <ion-input [(ngModel)]="mdl_apellido" formControlName="userctrl"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" [(ngModel)]="mdl_pass" formControlName="passwordcrl"></ion-input>
+    </ion-item>
+    <br>
+
+    <div class="ion-text-center ion-padding">
+      <ion-button [disabled]="!formGrp.valid" (click)="registrar()" expand="block" class="degradado">Registrar Usuario</ion-button>
+    </div>
+  </form>
+</ion-content>

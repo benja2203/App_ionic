@@ -41,6 +41,7 @@ export class LoginPage implements OnInit {
     if(!this.db.validarCredenciales(this.mdl_email, this.mdl_pass)) {
       this.mostrarMensaje('Credenciales Inválidas');
     }else{
+      localStorage.email_usuario_login = this.mdl_email;
       this.mostrarToast();
       this.router.navigate(['principal'])
     }
